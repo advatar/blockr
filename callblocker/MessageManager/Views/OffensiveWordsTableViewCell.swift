@@ -10,23 +10,32 @@ import UIKit
 
 class OffensiveWordsTableViewCell: UITableViewCell {
     private let kIsOnState = "kIsOnState"
-
+    private let ctx = CoreDataStorage.mainQueueContext()
+    
     @IBOutlet weak var offensiveWordsSwitch: UISwitch!
     override func awakeFromNib() {
         super.awakeFromNib()
         setupSwitch()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
     @IBAction func switchPressed(_ sender: UISwitch) {
         UserDefaults.standard.set(sender.isOn, forKey: kIsOnState)
-        let filterManager = MessageFilterManager()
-        filterManager.manageOffensiveWords(addToList: sender.isOn)
+        for offensiveWord in offensiveWords{
+            if sender.isOn {
+                _ = BlockedWord.createOrUpdate(content: offensiveWord, type: .offensive, ctx: ctx)
+            }
+            else {
+                BlockedWord.deleteWord(content: offensiveWord, ctx: ctx)
+                
+            }
+        }
+        CoreDataStorage.saveContext(ctx)
     }
     
     

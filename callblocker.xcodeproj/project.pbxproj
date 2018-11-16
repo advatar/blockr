@@ -37,10 +37,14 @@
 		CC1F23D5217DB97D008AB54C /* PhoneNumber+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1F23D0217DB967008AB54C /* PhoneNumber+CoreDataProperties.swift */; };
 		CC1F23D6217DB97E008AB54C /* PhoneNumber+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1F23D0217DB967008AB54C /* PhoneNumber+CoreDataProperties.swift */; };
 		CC1F23DE217DE886008AB54C /* callblockerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1F23DD217DE886008AB54C /* callblockerTests.swift */; };
+		CC2CB2DD219F3FD100A50022 /* BlockedWord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CB2DB219F3FD100A50022 /* BlockedWord+CoreDataClass.swift */; };
+		CC2CB2DE219F3FD100A50022 /* BlockedWord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CB2DC219F3FD100A50022 /* BlockedWord+CoreDataProperties.swift */; };
+		CC2CB2E0219F411000A50022 /* CoreDataReadOnlyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CB2DF219F411000A50022 /* CoreDataReadOnlyStorage.swift */; };
+		CC2CB2E2219F497800A50022 /* OffensiveWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CB2E1219F497800A50022 /* OffensiveWords.swift */; };
+		CC2CB2E3219F4ADB00A50022 /* BlockedWord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CB2DB219F3FD100A50022 /* BlockedWord+CoreDataClass.swift */; };
+		CC2CB2E4219F4ADE00A50022 /* BlockedWord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CB2DC219F3FD100A50022 /* BlockedWord+CoreDataProperties.swift */; };
 		CCD1B33C217F2B1A004BC57A /* MessageFilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD1B33B217F2B1A004BC57A /* MessageFilterTableViewController.swift */; };
-		CCD1B33E217F2D70004BC57A /* OffensiveWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD1B33D217F2D70004BC57A /* OffensiveWords.swift */; };
 		CCD1B340217F2F44004BC57A /* OffensiveWordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD1B33F217F2F44004BC57A /* OffensiveWordsTableViewCell.swift */; };
-		CCD1B342217F312D004BC57A /* MessageFilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD1B341217F312D004BC57A /* MessageFilterManager.swift */; };
 		CCD1B344217F5006004BC57A /* BlockerWordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD1B343217F5006004BC57A /* BlockerWordsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -112,11 +116,13 @@
 		CC1F23DB217DE886008AB54C /* callblockerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = callblockerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1F23DD217DE886008AB54C /* callblockerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = callblockerTests.swift; sourceTree = "<group>"; };
 		CC1F23DF217DE886008AB54C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC2CB2DB219F3FD100A50022 /* BlockedWord+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlockedWord+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CC2CB2DC219F3FD100A50022 /* BlockedWord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlockedWord+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CC2CB2DF219F411000A50022 /* CoreDataReadOnlyStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataReadOnlyStorage.swift; sourceTree = "<group>"; };
+		CC2CB2E1219F497800A50022 /* OffensiveWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffensiveWords.swift; sourceTree = "<group>"; };
 		CC891FDE217E60BC00D82E55 /* MessageFilterExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MessageFilterExtension.entitlements; sourceTree = "<group>"; };
 		CCD1B33B217F2B1A004BC57A /* MessageFilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFilterTableViewController.swift; sourceTree = "<group>"; };
-		CCD1B33D217F2D70004BC57A /* OffensiveWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffensiveWords.swift; sourceTree = "<group>"; };
 		CCD1B33F217F2F44004BC57A /* OffensiveWordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffensiveWordsTableViewCell.swift; sourceTree = "<group>"; };
-		CCD1B341217F312D004BC57A /* MessageFilterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFilterManager.swift; sourceTree = "<group>"; };
 		CCD1B343217F5006004BC57A /* BlockerWordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockerWordsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -216,6 +222,8 @@
 			children = (
 				CC1F23652178F113008AB54C /* ManagedObjects */,
 				CC1F23612178ECFE008AB54C /* CoreDataStorage.swift */,
+				CC2CB2E1219F497800A50022 /* OffensiveWords.swift */,
+				CC2CB2DF219F411000A50022 /* CoreDataReadOnlyStorage.swift */,
 				CC1F235C2178ECE5008AB54C /* callblocker.xcdatamodeld */,
 				CC1F2397217BB022008AB54C /* Config.swift */,
 			);
@@ -225,6 +233,8 @@
 		CC1F23652178F113008AB54C /* ManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
+				CC2CB2DB219F3FD100A50022 /* BlockedWord+CoreDataClass.swift */,
+				CC2CB2DC219F3FD100A50022 /* BlockedWord+CoreDataProperties.swift */,
 				CC1F23CF217DB967008AB54C /* PhoneNumber+CoreDataClass.swift */,
 				CC1F23D0217DB967008AB54C /* PhoneNumber+CoreDataProperties.swift */,
 			);
@@ -279,20 +289,10 @@
 		CCD1B337217F2AB0004BC57A /* MessageManager */ = {
 			isa = PBXGroup;
 			children = (
-				CCD1B338217F2ABD004BC57A /* Model */,
 				CCD1B339217F2AC7004BC57A /* Controller */,
 				CCD1B33A217F2AD8004BC57A /* Views */,
 			);
 			path = MessageManager;
-			sourceTree = "<group>";
-		};
-		CCD1B338217F2ABD004BC57A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				CCD1B33D217F2D70004BC57A /* OffensiveWords.swift */,
-				CCD1B341217F312D004BC57A /* MessageFilterManager.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		CCD1B339217F2AC7004BC57A /* Controller */ = {
@@ -487,12 +487,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC2CB2DE219F3FD100A50022 /* BlockedWord+CoreDataProperties.swift in Sources */,
 				CC1F23D1217DB967008AB54C /* PhoneNumber+CoreDataClass.swift in Sources */,
 				CCD1B340217F2F44004BC57A /* OffensiveWordsTableViewCell.swift in Sources */,
 				CC1F23622178ECFE008AB54C /* CoreDataStorage.swift in Sources */,
 				CC1F2398217BB022008AB54C /* Config.swift in Sources */,
-				CCD1B33E217F2D70004BC57A /* OffensiveWords.swift in Sources */,
-				CCD1B342217F312D004BC57A /* MessageFilterManager.swift in Sources */,
 				CC1F235E2178ECE5008AB54C /* callblocker.xcdatamodeld in Sources */,
 				CC1F23CC217DB3AC008AB54C /* BlockedNumberTableViewController.swift in Sources */,
 				CC1F23D2217DB967008AB54C /* PhoneNumber+CoreDataProperties.swift in Sources */,
@@ -500,7 +499,9 @@
 				CC1F238F217A68AB008AB54C /* NumbersTableViewCell.swift in Sources */,
 				CC1F230A2178AF6B008AB54C /* AppDelegate.swift in Sources */,
 				CC1F239A217BD099008AB54C /* InfoViewController.swift in Sources */,
+				CC2CB2E2219F497800A50022 /* OffensiveWords.swift in Sources */,
 				CC1F238D217A686A008AB54C /* NumberViewModel.swift in Sources */,
+				CC2CB2DD219F3FD100A50022 /* BlockedWord+CoreDataClass.swift in Sources */,
 				CCD1B344217F5006004BC57A /* BlockerWordsTableViewCell.swift in Sources */,
 				CCD1B33C217F2B1A004BC57A /* MessageFilterTableViewController.swift in Sources */,
 			);
@@ -510,11 +511,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC2CB2E4219F4ADE00A50022 /* BlockedWord+CoreDataProperties.swift in Sources */,
 				CC1F23632178ECFE008AB54C /* CoreDataStorage.swift in Sources */,
 				CC1F23D5217DB97D008AB54C /* PhoneNumber+CoreDataProperties.swift in Sources */,
 				CC1F235F2178ECE5008AB54C /* callblocker.xcdatamodeld in Sources */,
 				CC1F23D4217DB97A008AB54C /* PhoneNumber+CoreDataClass.swift in Sources */,
+				CC2CB2E0219F411000A50022 /* CoreDataReadOnlyStorage.swift in Sources */,
 				CC1F23422178C7C5008AB54C /* MessageFilterExtension.swift in Sources */,
+				CC2CB2E3219F4ADB00A50022 /* BlockedWord+CoreDataClass.swift in Sources */,
 				CC1F23C9217CEF03008AB54C /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

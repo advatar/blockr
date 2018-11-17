@@ -9,9 +9,9 @@
 import UIKit
 
 class MessageFilterTableViewController: UITableViewController {
-
-    private var userBlockedWords = [String]()
-    private let filterManager = MessageFilterManager()
+    
+    private let ctx = CoreDataStorage.mainQueueContext()
+    private var userBlockedWords = [BlockedWord]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Message Filter"
@@ -19,7 +19,10 @@ class MessageFilterTableViewController: UITableViewController {
     }
     
     private func reloadData(){
-        self.userBlockedWords = filterManager.userBlockedWords.reversed()
+
+        if let words = BlockedWord.fetchBy(type: .user, context: ctx){
+            self.userBlockedWords = words
+        }
         self.tableView.reloadData()
     }
     
@@ -33,13 +36,10 @@ class MessageFilterTableViewController: UITableViewController {
         }
         let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
             if let word = alertController.textFields?[0].text{
-                do {
-                    try self.filterManager.manageBlockedWord(addToList: true, word: word)
-                } catch let error  {
-                    print("\(error.localizedDescription)")
-                    DispatchQueue.main.async {
-                        self.displayError(error: error.localizedDescription)
-                    }
+                let ctx = CoreDataStorage.privateQueueContext()
+                ctx.performAndWait {
+                    _ = BlockedWord.createOrUpdate(content: word, type: .user, ctx: ctx)
+                    CoreDataStorage.saveContext(ctx)
                 }
                 DispatchQueue.main.async {
                     self.reloadData()
@@ -60,11 +60,11 @@ class MessageFilterTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0{
             return 1
@@ -78,7 +78,7 @@ class MessageFilterTableViewController: UITableViewController {
         }
         return nil
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
@@ -87,11 +87,12 @@ class MessageFilterTableViewController: UITableViewController {
         }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "BlockedWordsCellID", for: indexPath) as! BlockerWordsTableViewCell
-        cell.wordLabel.text = userBlockedWords[indexPath.row]
+        let word = userBlockedWords[indexPath.row]
+        cell.wordLabel.text = word.content
         return cell
     }
     
-
+    
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
@@ -100,11 +101,7 @@ class MessageFilterTableViewController: UITableViewController {
         if editingStyle == .delete {
             let deletedWord = userBlockedWords[indexPath.row]
             userBlockedWords.remove(at: indexPath.row)
-            do {
-                try self.filterManager.manageBlockedWord(addToList: false, word: deletedWord)
-            } catch let error {
-                print("\(error)")
-            }
+            BlockedWord.deleteWord(content: deletedWord.content, ctx: ctx)
             reloadData()
         }
     }

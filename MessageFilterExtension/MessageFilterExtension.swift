@@ -9,7 +9,7 @@
 import IdentityLookup
 
 final class MessageFilterExtension: ILMessageFilterExtension {
-    
+    let ctx = CoreDataReadOnlyStorage.mainQueueContext()
 }
 
 extension MessageFilterExtension: ILMessageFilterQueryHandling {
@@ -48,12 +48,10 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
     private func offlineAction(for queryRequest: ILMessageFilterQueryRequest) -> ILMessageFilterAction {
         // Replace with logic to perform offline check whether to filter first (if possible).
         guard let messageBody = queryRequest.messageBody?.lowercased(),
-            let userDefaults = UserDefaults.init(suiteName: Config.sharedGroupName),
-            let blockedWords = userDefaults.array(forKey: Config.kBlockedWords) as? [String] else {return .none}
-        
+              let blockedWords = BlockedWord.fetchAll(context: ctx) else {return .none}
         for blockedWord in blockedWords {
             NSLog("Blocked word: \(blockedWord)\n")
-            if messageBody.contains(blockedWord.lowercased()) {
+            if let word = blockedWord.content, messageBody.contains(word.lowercased()){
                 return .filter
             }
         }

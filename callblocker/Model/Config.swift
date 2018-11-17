@@ -10,7 +10,6 @@ import Foundation
 
 enum Config {
     static let callDirectoryExtensionID = "com.valcicivo.callblocker.CallDirectoryExtension"
-    static let sharedGroupName = "group.valcicivo.CallBlocker"
     static let kBlockedWords = "kBlockedWords"
     static let kUserBlockedWords = "kUserBlockedWords"
 }

@@ -75,7 +75,7 @@ open class CoreDataStorage {
 			NSMigratePersistentStoresAutomaticallyOption: true,
 			NSInferMappingModelAutomaticallyOption: true
 		]
-		let directory = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.valcicivo.CallBlocker")!
+		let directory = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.carechain.CallBlocker")!
 		let url = directory.appendingPathComponent("callblocker.sqlite")
 		do {
 			try coordinator!.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: url, options: options)

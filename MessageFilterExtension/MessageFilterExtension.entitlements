@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.valcicivo.CallBlocker</string>
+		<string>group.carechain.CallBlocker</string>
 	</array>
 </dict>
 </plist>

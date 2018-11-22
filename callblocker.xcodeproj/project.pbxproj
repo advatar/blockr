@@ -708,14 +708,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = callblocker/callblocker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U9QK9TDBEE;
+				DEVELOPMENT_TEAM = BH7Z7SE66T;
 				INFOPLIST_FILE = callblocker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.valcicivo.callblocker;
+				PRODUCT_BUNDLE_IDENTIFIER = io.carechain.callblocker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -729,14 +729,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = callblocker/callblocker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U9QK9TDBEE;
+				DEVELOPMENT_TEAM = BH7Z7SE66T;
 				INFOPLIST_FILE = callblocker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.valcicivo.callblocker;
+				PRODUCT_BUNDLE_IDENTIFIER = io.carechain.callblocker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -748,7 +748,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = MessageFilterExtension/MessageFilterExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U9QK9TDBEE;
+				DEVELOPMENT_TEAM = BH7Z7SE66T;
 				INFOPLIST_FILE = MessageFilterExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -756,7 +756,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.valcicivo.callblocker.MessageFilterExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = io.carechain.callblocker.MessageFilterExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -769,7 +769,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = MessageFilterExtension/MessageFilterExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U9QK9TDBEE;
+				DEVELOPMENT_TEAM = BH7Z7SE66T;
 				INFOPLIST_FILE = MessageFilterExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -777,7 +777,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.valcicivo.callblocker.MessageFilterExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = io.carechain.callblocker.MessageFilterExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -791,7 +791,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = CallDirectoryExtension/CallDirectoryExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U9QK9TDBEE;
+				DEVELOPMENT_TEAM = BH7Z7SE66T;
 				INFOPLIST_FILE = CallDirectoryExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -799,7 +799,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.valcicivo.callblocker.CallDirectoryExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = io.carechain.callblocker.CallDirectoryExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -813,7 +813,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = CallDirectoryExtension/CallDirectoryExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U9QK9TDBEE;
+				DEVELOPMENT_TEAM = BH7Z7SE66T;
 				INFOPLIST_FILE = CallDirectoryExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -821,7 +821,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.valcicivo.callblocker.CallDirectoryExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = io.carechain.callblocker.CallDirectoryExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -834,14 +834,14 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U9QK9TDBEE;
+				DEVELOPMENT_TEAM = BH7Z7SE66T;
 				INFOPLIST_FILE = callblockerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.valcicivo.callblockerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.carechain.callblockerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -854,14 +854,14 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U9QK9TDBEE;
+				DEVELOPMENT_TEAM = BH7Z7SE66T;
 				INFOPLIST_FILE = callblockerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.valcicivo.callblockerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.carechain.callblockerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

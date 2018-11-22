@@ -9,7 +9,7 @@
 import Foundation
 
 enum Config {
-    static let callDirectoryExtensionID = "com.valcicivo.callblocker.CallDirectoryExtension"
+    static let callDirectoryExtensionID = "io.carechain.callblocker.CallDirectoryExtension"
     static let kBlockedWords = "kBlockedWords"
     static let kUserBlockedWords = "kUserBlockedWords"
 }
